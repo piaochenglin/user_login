@@ -1,0 +1,32 @@
+<h1>Listing owners</h1>
+<h1>Do not need restart</h1>
+<%= link_to 'New owner', new_owner_path %>
+<%= render 'navbar'%>
+<table>
+  <tr>
+    <th>
+      氏名
+    </th>
+    <th>
+      メールアドレス
+    </th>
+    <th>
+      有効・無効
+    </th>
+  </tr>
+  <% @owners.each do |owner| %>
+    <tr>
+      <td><%= owner.name %>
+      </td>
+      <td><%= owner.email %>
+      </td>
+      <td><%= owner.active %>
+      </td>
+      <td><%= link_to 'Show', owner_path(owner) %>
+      <td><%= link_to 'Edit', edit_owner_path(owner) %></td>
+      <td><%= link_to 'Destroy', owner_path(owner), method: :delete, data: {confirm: 'Are you sure?'} %>
+      <td>
+      </td>
+    </tr>
+  <% end %>
+</table>

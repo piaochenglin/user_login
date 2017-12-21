@@ -1,0 +1,41 @@
+<h1>Owner Details</h1>
+<p>
+  <strong>
+    氏名
+  </strong>
+  <%= @owner.name %>
+</p>
+
+<p>
+  <strong>
+    メールアドレス
+  </strong>
+  <%= @owner.email %>
+</p>
+<p>
+  <strong>
+    性別
+  </strong>
+  <%= @owner.sex %>
+</p>
+
+<p>
+  <strong>
+    住所
+  </strong>
+  <%= @owner.address %>
+</p>
+<p>
+  <strong>
+    電話番号
+  </strong>
+  <%= @owner.tel %>
+</p>
+
+<p>
+  <strong>
+    有効・無効
+  </strong>
+  <%= @owner.active %>
+</p>
+<%= link_to 'Back', owners_path %>

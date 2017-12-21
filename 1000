@@ -1,0 +1,7 @@
+      invoke  active_record
+      create    db/migrate/20171220083538_create_houses.rb
+      create    app/models/house.rb
+      invoke    test_unit
+   identical      test/models/house_test.rb
+    conflict      test/fixtures/houses.yml
+<fixtures/houses.yml? (enter "h" for help) [Ynaqdh] Terminate batch job (Y/N)? Terminate batch job (Y/N)? Terminate batch job (Y/N)? Terminate batch job (Y/N)? Terminate batch job (Y/N)? 

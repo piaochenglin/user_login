@@ -1,0 +1,47 @@
+<%= form_for(@owner) do |f| %>
+
+  <% if @owner.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@owner.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @owner.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :氏名 %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :メールアドレス %><br>
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :性別 %><br>
+    <%= f.text_field :sex %>
+  </p>
+  <p>
+    <%= f.label :住所 %><br>
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :電話番号 %><br>
+    <%= f.text_field :tel %>
+  </p>
+  <p>
+    <%= f.label :有効・無効 %><br>
+    <%= f.text_field :active %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
