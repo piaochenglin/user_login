@@ -10,7 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171220111723) do
+ActiveRecord::Schema.define(version: 20171221123620) do
+
+  create_table "houses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.string "address"
+    t.string "city"
+    t.integer "type"
+    t.integer "guest_count"
+    t.integer "bedroom_count"
+    t.integer "bed_count"
+    t.integer "bathroom_count"
+    t.text "introduce"
+    t.string "map_url"
+    t.time "checkin_from"
+    t.time "checkout_to"
+    t.integer "active"
+    t.datetime "deleted_at"
+    t.bigint "owner_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["owner_id"], name: "index_houses_on_owner_id"
+  end
 
   create_table "owners", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
@@ -31,4 +52,5 @@ ActiveRecord::Schema.define(version: 20171220111723) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "houses", "owners"
 end

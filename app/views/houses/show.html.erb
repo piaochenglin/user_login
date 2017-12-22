@@ -1,0 +1,84 @@
+<h1> Details</h1>
+<p>
+  <strong>
+    物件名
+  </strong>
+  <%= @house.name %>
+</p>
+
+<p>
+  <strong>
+    オナー
+  </strong>
+  <%= @house.owner_id %>
+</p>
+<p>
+  <strong>
+    住所
+  </strong>
+  <%= @house.address %>
+</p>
+
+<p>
+  <strong>
+    物件タイプ
+  </strong>
+  <%= @house.type %>
+</p>
+<p>
+  <strong>
+    ゲスト人数
+  </strong>
+  <%= @house.guest_count %>
+</p>
+<p>
+  <strong>
+    寝室数
+  </strong>
+  <%= @house.bedroom_count %>
+</p>
+
+<p>
+  <strong>
+    ベッド台数
+  </strong>
+  <%= @house.bed_count %>
+</p>
+<p>
+  <strong>
+    バスルーム
+  </strong>
+  <%= @house.bathroom_count %>
+</p>
+
+<p>
+  <strong>
+    チェックイン時間
+  </strong>
+  <%= @house.checkin_from %>
+</p>
+<p>
+  <strong>
+    チェックアウト時間
+  </strong>
+  <%= @house.checkout_to %>
+</p>
+<!--<p>-->
+  <!--<strong>-->
+    <!--基本料金（一泊）-->
+  <!--</strong>-->
+  <!--<%= @house.charge %>-->
+<!--</p>-->
+<!--<p>-->
+  <strong>
+    地図URL
+  </strong>
+  <%= @house.map_url %>
+</p>
+<p>
+  <strong>
+    有効・無効
+  </strong>
+  <%= @house.active %>
+</p>
+<%= link_to 'Back', owners_path %>

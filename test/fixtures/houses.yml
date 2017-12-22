@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  address: MyString
+  city: MyString
+  type: 1
+  guest_count: 1
+  bedroom_count: 1
+  bed_count: 1
+  bathroom_count: 1
+  introduce: MyText
+  map_url: MyString
+  checkin_from: 2017-12-21 20:36:21
+  checkout_to: 2017-12-21 20:36:21
+  active: 1
+  deleted_at: 2017-12-21 20:36:21
+  owner: one
+
+two:
+  name: MyString
+  address: MyString
+  city: MyString
+  type: 1
+  guest_count: 1
+  bedroom_count: 1
+  bed_count: 1
+  bathroom_count: 1
+  introduce: MyText
+  map_url: MyString
+  checkin_from: 2017-12-21 20:36:21
+  checkout_to: 2017-12-21 20:36:21
+  active: 1
+  deleted_at: 2017-12-21 20:36:21
+  owner: two

@@ -8,6 +8,12 @@ Rails.application.routes.draw do
   post 'applicants/create'
 
   resources :owners do
+      collection do
+        get 'list'
+      end
+  end
+
+  resources :houses do
 
   end
 

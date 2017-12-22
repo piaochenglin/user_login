@@ -1,0 +1,71 @@
+<%= form_for(@house) do |f| %>
+
+  <% if @house.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@house.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @house.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :物件名 %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :オナー %><br>
+    <%= f.text_field :owner_id %>
+  </p>
+  <p>
+    <%= f.label :住所 %><br>
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :物件タイプ %><br>
+    <%= f.text_field :type %>
+  </p>
+  <p>
+    <%= f.label :ゲスト人数 %><br>
+    <%= f.text_field :guest_count %>
+  </p>
+  <p>
+    <%= f.label :寝室数 %><br>
+    <%= f.text_field :bedroom_count %>
+  </p>
+  <p>
+    <%= f.label :ベッド台数 %><br>
+    <%= f.text_field :bed_count %>
+  </p>
+  <p>
+    <%= f.label :バスルーム %><br>
+    <%= f.text_field :bathroom_count %>
+  </p>
+
+  <p>
+    <%= f.label :チェックイン時間 %><br>
+    <%= f.text_field :checkin_from %>
+  </p>
+  <p>
+    <%= f.label :チェックアウト時間 %><br>
+    <%= f.text_field :checkout_to %>
+  </p>
+  <p>
+    <%= f.label :地図URL %><br>
+    <%= f.text_field :map_url %>
+  </p>
+  <p>
+    <%= f.label :有効・無効 %><br>
+    <%= f.text_field :active %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>

@@ -23,10 +23,15 @@
     <%= f.label :メールアドレス %><br>
     <%= f.text_field :email %>
   </p>
+
   <p>
     <%= f.label :性別 %><br>
-    <%= f.text_field :sex %>
+    <%= f.radio_button  :sex, :"男" %>
+    <%= f.label :男 %>
+    <%= f.radio_button  :sex, :"女" %>
+    <%= f.label :女 %><br>
   </p>
+
   <p>
     <%= f.label :住所 %><br>
     <%= f.text_field :address %>
@@ -35,9 +40,12 @@
     <%= f.label :電話番号 %><br>
     <%= f.text_field :tel %>
   </p>
+
   <p>
-    <%= f.label :有効・無効 %><br>
-    <%= f.text_field :active %>
+    <%= f.radio_button  :active, :"有効" %>
+    <%= f.label :有効 %>
+    <%= f.radio_button  :active, :"無効" %>
+    <%= f.label :無効 %><br>
   </p>
 
   <p>
