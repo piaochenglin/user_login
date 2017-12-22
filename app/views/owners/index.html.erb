@@ -30,3 +30,5 @@
     </tr>
   <% end %>
 </table>
+<%= will_paginate @owners ,:previous_label => t(:前のページ), :next_label => t(:次のページ)%>
+
