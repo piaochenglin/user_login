@@ -6,6 +6,7 @@ class OwnersController < ApplicationController
     @owners = Owner.where(deleted_at: nil)
                   .select("id,name,email,active")
                   .paginate(page: page, per_page: ApplicationController::PAGE_SIZE)
+                  .by_id(params[:owner][:id])
                   .by_name(params[:name])
                   .by_email(params[:email])
                   .by_active(params[:active])
@@ -26,10 +27,17 @@ class OwnersController < ApplicationController
   # end
 
   def list
-    owners = Owner.where(deleted_at: nil)
-    @owner_list = []
-    owners.each do |owner|
-      @owner_list << {:key => owner.id, :value => owner.name}
+    # @owner_list = Owner.where(deleted_at: nil)
+    #                    .select("id,name")
+    def list
+      owners = Owner.where(deleted_at: nil)
+      @owner_list = []
+      owners.each do |owner|
+        owner_list << {:key => owner.id, :value => owner.name}
+      end
+      # 下面的两种方法都可以，发送json格式，第一种包了一层
+      # render json: {owner_list: owner_list}
+      render :json => @owner_list.to_json
     end
   end
 

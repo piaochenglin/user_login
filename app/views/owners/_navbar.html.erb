@@ -1,6 +1,8 @@
 <div class="nav navbar-nav navbar-left">
   <%= form_tag "#" , :method => :get do %>
     <div class="input-group" id="search-id" >
+      <%= @owner_list = Owner.where(deleted_at: nil)
+          collection_select(:owner, :id, @owner_list, :id, :name, options ={:prompt => "-Select a owner"}, :class =>"owner") %>
       <input type="text" class="form-control" name="name" value="<%= params[:name] %>" placeholder="name" width="400">
       <input type="text" class="form-control" name="email" value="<%= params[:email] %>" placeholder="email" width="400">
       <input type="text" class="form-control" name="active" value="<%= params[:active] %>" placeholder="active" width="400">
